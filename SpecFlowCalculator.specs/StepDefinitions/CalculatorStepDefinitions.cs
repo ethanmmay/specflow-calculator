@@ -4,6 +4,7 @@ namespace SpecFlowCalculator.specs.StepDefinitions
     public sealed class CalculatorStepDefinitions
     {
         private readonly Calculator _calculator = new Calculator();
+        private int _result;
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
         [Given("the first number is (.*)")]
@@ -28,8 +29,7 @@ namespace SpecFlowCalculator.specs.StepDefinitions
         public void WhenTheTwoNumbersAreAdded()
         {
             //TODO: implement act (action) logic
-
-            throw new PendingStepException();
+            _result = _calculator.Add();
         }
 
         [Then("the result should be (.*)")]
