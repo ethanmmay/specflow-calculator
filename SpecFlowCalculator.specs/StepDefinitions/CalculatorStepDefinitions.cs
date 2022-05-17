@@ -3,6 +3,7 @@ namespace SpecFlowCalculator.specs.StepDefinitions
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
+        private readonly Calculator _calculator = new Calculator();
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
         [Given("the first number is (.*)")]
@@ -13,8 +14,7 @@ namespace SpecFlowCalculator.specs.StepDefinitions
             // To use the multiline text or the table argument of the scenario,
             // additional string/Table parameters can be defined on the step definition
             // method. 
-
-            throw new PendingStepException();
+            _calculator.FirstNumber = number;
         }
 
         [Given("the second number is (.*)")]
