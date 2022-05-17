@@ -21,8 +21,7 @@ namespace SpecFlowCalculator.specs.StepDefinitions
         public void GivenTheSecondNumberIs(int number)
         {
             //TODO: implement arrange (precondition) logic
-
-            throw new PendingStepException();
+            _calculator.SecondNumber = number;
         }
 
         [When("the two numbers are added")]
