@@ -1,3 +1,6 @@
+using FluentAssertions;
+using TechTalk.SpecFlow;
+
 namespace SpecFlowCalculator.specs.StepDefinitions
 {
     [Binding]
@@ -36,8 +39,7 @@ namespace SpecFlowCalculator.specs.StepDefinitions
         public void ThenTheResultShouldBe(int result)
         {
             //TODO: implement assert (verification) logic
-
-            throw new PendingStepException();
+            _result.Should().Be(result);
         }
     }
 }
